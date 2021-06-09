@@ -1,0 +1,15 @@
+for (let i = 0; i < 10 ; i++) {
+    console.log(i); 
+}
+
+for (let i = 10; i >= 0; i-=2) {
+    console.log(i);
+}
+
+
+// 배열
+const names = ['멍멍이', '야옹이', '멍뭉이'];
+
+for(let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}

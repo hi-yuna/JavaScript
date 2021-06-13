@@ -1,0 +1,27 @@
+// race는 가장 빨리 끝나는 것
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const getDog = async () => {
+    await sleep(1000);
+    return '멍멍이';
+}
+
+const getRabbit = async () => {
+    await sleep(500);
+    return '토끼';
+}
+
+const getTurtle = async () => {
+    await sleep(1000);
+    return '거북이';
+}
+
+async function process(){
+    const first = await Promise.race([getDog(), getRabbit(), getTurtle()]);
+    console.log(first);
+}
+
+process();

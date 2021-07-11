@@ -8,7 +8,7 @@ function newRegister() {
   var delBtn = document.createElement("span");
   var delText = document.createTextNode("X");
   delBtn.setAttribute("class", "del");
-  delBtn.append(delText);
+  delBtn.appendChild(delText);
   newP.appendChild(delBtn);
 
   var nameList = document.querySelector("#nameList");

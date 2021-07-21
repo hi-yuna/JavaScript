@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event20</title>
+    <script src="event20.js"></script>
+</head>
+<body>
+    <form name="myForm">
+
+		<h1>1. +연산</h1>
+		<input type="text" id="v1"> +<input type="text" id="v2">
+		=<input type="text" id="result">
+		<button onclick="sum(); return false">연산</button>
+
+		<h1>2. 총합구하기</h1>
+		가격<input type="text" id="price"> X 수량 <select id="quantity"
+			onchange="total(this.value)">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select> 
+		총합:<span id="total"></span>
+
+		<h3>3. 총합 구하기2 (선택된 값만)</h3>
+		<div>
+		바나나(1000원)<input type="checkbox" name="fruits" class="fruits" value="1000"><br> 
+			사과(500원)<input type="checkbox" name="fruits" class="fruits" value="500"><br> 
+			배(1500원)<input type="checkbox" name="fruits" class="fruits" value="1500"><br>
+		<button onclick="totalsum(); return false;">총합구하기</button>
+		<br> 선택한 총가격:<span id="totalprice"></span>
+		</div>
+	</form>
+</body>
+</html>
